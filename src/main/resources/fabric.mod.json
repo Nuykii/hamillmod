@@ -1,12 +1,12 @@
 {
   "schemaVersion": 1,
-  "id": "examplemod",
+  "id": "hamillmod",
   "version": "${version}",
 
-  "name": "Example Mod",
-  "description": "This mod aims to help new BTA modders.",
+  "name": "Hamill Mod",
+  "description": "This is my personal mod to learn programming in Java. Named after my deceased best friend Michael Hamill.",
   "authors": [
-    "Turnip Labs"
+    "mael"
   ],
   "contact": {
     "homepage": "",
@@ -19,20 +19,17 @@
   "environment": "*",
   "entrypoints": {
     "main": [
-			"turniplabs.examplemod.ExampleMod"
+      "mael.hamillmod.HamillMod"
     ],
 		"beforeGameStart": [
-			"turniplabs.examplemod.ExampleMod"
+          "mael.hamillmod.HamillMod"
 		],
 		"afterGameStart": [
-			"turniplabs.examplemod.ExampleMod"
-		],
-		"recipesReady": [
-			"turniplabs.examplemod.ExampleMod"
+          "mael.hamillmod.HamillMod"
 		]
 	},
   "mixins": [
-      "examplemod.mixins.json"
+		"hamillmod.mixins.json"
   ],
 
   "depends": {
