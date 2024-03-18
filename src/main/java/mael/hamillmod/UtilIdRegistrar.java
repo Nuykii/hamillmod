@@ -20,7 +20,7 @@ public class UtilIdRegistrar {
 
 	public static int nextIdItem() {
 		throwException(currItemId);
-		return currItemId++;
+		return currItemId++; 			// returns the base ItemId used in the .cfg to something greater, to avoid the throwException to crash the game
 	}
 
 	public static int nextIdBlock() {
@@ -30,7 +30,7 @@ public class UtilIdRegistrar {
 
 	private static void throwException(int id){
 		if (usedIds[id]) { // If id is already used then throw exception
-			throw new RuntimeException("Tried to use id: " + id + " while its already being used by " + Item.itemsList[id].getKey() + "!");
+			throw new RuntimeException("Tried to use id: " + id + " while its already being used by " + Item.itemsList[id].getKey() + "!"); // crashes the game if the ID is already in use by something else
 		}
 		else {
 			usedIds[id] = true;

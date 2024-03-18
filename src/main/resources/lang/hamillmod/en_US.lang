@@ -1,3 +1,3 @@
-tile.hamillmod.diorite.name=Diorite
-tile.hamillmod.andesite.name=Andesite
-item.hamillmod.food.uncookedSteak.name=Raw Beef
+item.hamillmod.food.rawBeef.name=Raw Beef
+item.hamillmod.food.rawChicken.name=Raw Chicken
+item.hamillmod.food.rawMutton.name=Raw Mutton
