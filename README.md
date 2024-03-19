@@ -8,7 +8,6 @@ This mod aims to backport the foods of regular Minecraft for the animals present
 
 ### What's currently implemented? What will you do next?
 
-For now, you have access to raw Beef, Chicken and Mutton in the creative menu. My plan for the next commit is to have the cooked versions also available. The next big step is making the raw variants dropable by mobs which will include some Mixin coding.
-Then it will just be making the food cookable and voila! You'll have all the food you need.
+For now, you have access to raw Beef, Chicken and Mutton in the creative menu as well as the cooked variants. Now the only thing left is to implement mixin so you can actually get them.
 
 Next I will try to backport melon as well, but that's farther into the future.
