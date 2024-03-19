@@ -4,7 +4,7 @@
   "version": "${version}",
 
   "name": "Hamill Mod",
-  "description": "This is my personal mod to learn programming in Java. Named after my deceased best friend Michael Hamill.",
+  "description": "This mod aims to add all types of food to the game, from vanilla foods to ones I personally like.",
   "authors": [
     "mael"
   ],
@@ -21,6 +21,9 @@
     "main": [
       "mael.hamillmod.HamillMod"
     ],
+		"recipesReady": [
+			"mael.hamillmod.furnaceRecipes"
+		],
 		"beforeGameStart": [
           "mael.hamillmod.HamillMod"
 		],
