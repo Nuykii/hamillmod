@@ -4,6 +4,10 @@
     "package": "mael.hamillmod.mixin",
     "compatibilityLevel": "JAVA_8",
     "mixins": [
+      "cowMixin",
+      "chickenMixin",
+      "pigMixin",
+      "sheepMixin"
     ],
     "client": [
     ],
