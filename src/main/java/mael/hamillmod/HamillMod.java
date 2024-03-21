@@ -38,7 +38,7 @@ public class HamillMod implements ModInitializer, GameStartEntrypoint, RecipeEnt
 	public static Item roastedPorkchop = ItemHelper.createItem(MOD_ID, new ItemFoodStackable("food.roastedPorkchop", UtilIdRegistrar.nextIdItem(), 6, true, 16), "roastedPorkchop.png");
 	public static ItemSoup beefBourguignon = (ItemSoup) ItemHelper.createItem(MOD_ID, new ItemSoup("food.beefBourguignon", UtilIdRegistrar.nextIdItem(), 10), "beefBourguignon.png" );
 	public static ItemSoup irishStew = (ItemSoup) ItemHelper.createItem(MOD_ID, new ItemSoup("food.irishStew", UtilIdRegistrar.nextIdItem(), 8), "irishStew.png"); // Michael I miss you so much
-
+	public static ItemSoup tikkaMassala = (ItemSoup) ItemHelper.createItem(MOD_ID, new ItemSoup("food.tikkaMassala", UtilIdRegistrar.nextIdItem(), 7), "tikkaMassala.png");
     @Override
 	public void onInitialize() {
 		LOGGER.info("HamillMod successfully loaded.");
