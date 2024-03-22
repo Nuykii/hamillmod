@@ -1,7 +1,6 @@
 package mael.hamillmod;
 
 import net.fabricmc.api.ModInitializer;
-import net.minecraft.core.block.Block;
 import net.minecraft.core.item.Item;
 import net.minecraft.core.item.ItemFoodStackable;
 import net.minecraft.core.item.ItemSoup;
@@ -12,7 +11,6 @@ import turniplabs.halplibe.util.ConfigHandler;
 import turniplabs.halplibe.util.GameStartEntrypoint;
 import turniplabs.halplibe.util.RecipeEntrypoint;
 
-import javax.annotation.Nullable;
 import java.util.Properties;
 
 
