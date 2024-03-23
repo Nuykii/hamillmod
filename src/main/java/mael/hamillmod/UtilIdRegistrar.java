@@ -20,7 +20,7 @@ public class UtilIdRegistrar {
 
 	public static int nextIdItem() {
 		throwException(currItemId);
-		return currItemId++; 			// returns the base ItemId used in the .cfg to something greater, to avoid the throwException to crash the game
+		return currItemId++; 			// returns the base ItemId used in the .cfg + 1, to avoid the throwException to crash the game
 	}
 
 	public static int nextIdBlock() {
@@ -36,3 +36,5 @@ public class UtilIdRegistrar {
 			usedIds[id] = true;
 		}
 	} }
+
+// This class literally saves my life.

@@ -65,6 +65,20 @@ public class furnaceRecipes implements RecipeEntrypoint { //RecipeEntryPoint is 
 			.addInput('W', Item.bowl)
 			.setConsumeContainer(false)
 			.create("tikkaMassala", tikkaMassala.getDefaultStack());
+
+		RecipeBuilder.Shaped(MOD_ID)
+			.setShape("Q Q"," Q " )
+			.addInput('Q', Item.quartz)
+			.create("plate", plate.getDefaultStack());
+
+		RecipeBuilder.Shaped(MOD_ID)
+			.setShape("PCB", " L ")
+			.addInput('P', roastedPorkchop)
+			.addInput('C', Item.cherry)
+			.addInput('B', Item.foodBread)
+			.addInput('L', plate)
+			.setConsumeContainer(false)
+			.create("fullEnglishBreakfast", fullEnglish.getDefaultStack());
 	}
 }
 

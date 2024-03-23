@@ -2,7 +2,6 @@ package mael.hamillmod.mixin;
 
 import mael.hamillmod.HamillMod;
 import net.minecraft.core.entity.animal.EntityAnimal;
-import net.minecraft.core.item.Item;
 import net.minecraft.core.world.World;
 import net.minecraft.core.entity.animal.EntityChicken;
 import org.spongepowered.asm.mixin.Mixin;

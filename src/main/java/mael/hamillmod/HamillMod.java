@@ -18,7 +18,7 @@ public class HamillMod implements ModInitializer, GameStartEntrypoint, RecipeEnt
 	public static final String MOD_ID = "hamillmod";
 	public static final Logger LOGGER = LoggerFactory.getLogger(MOD_ID);
 
-	static{ //this just uses the UtilIdRegistrar for Ids
+	static{ //this just uses UtilIdRegistrar for Ids
 			Properties prop = new Properties();
 			prop.setProperty("startingBlockId","10000");
 			prop.setProperty("startingItemId","19000");
@@ -37,7 +37,11 @@ public class HamillMod implements ModInitializer, GameStartEntrypoint, RecipeEnt
 	public static ItemSoup beefBourguignon = (ItemSoup) ItemHelper.createItem(MOD_ID, new ItemSoup("food.beefBourguignon", UtilIdRegistrar.nextIdItem(), 10), "beefBourguignon.png" );
 	public static ItemSoup irishStew = (ItemSoup) ItemHelper.createItem(MOD_ID, new ItemSoup("food.irishStew", UtilIdRegistrar.nextIdItem(), 8), "irishStew.png"); // Michael I miss you so much
 	public static ItemSoup tikkaMassala = (ItemSoup) ItemHelper.createItem(MOD_ID, new ItemSoup("food.tikkaMassala", UtilIdRegistrar.nextIdItem(), 7), "tikkaMassala.png");
-    @Override
+	public static Item fullEnglish = ItemHelper.createItem(MOD_ID, new fullEnglish("food.fullEnglish", UtilIdRegistrar.nextIdItem(), 15), "fullEnglish.png");
+
+	// food utensils start here
+	public static Item plate = ItemHelper.createItem(MOD_ID, new Item("plate", UtilIdRegistrar.nextIdItem()), "plate.png");
+	@Override
 	public void onInitialize() {
 		LOGGER.info("HamillMod successfully loaded.");
 	}
