@@ -20,7 +20,7 @@ public class sheepMixin extends EntityAnimal {
 	@Inject(method = "dropFewItems", at = @At("HEAD"))
 	protected void dropFewItems(CallbackInfo si) {
 		int muttonId = this.remainingFireTicks > 0 ? HamillMod.roastedLamb.id : HamillMod.rawMutton.id;
-		int meat = random.nextInt(3) + 1;
+		int meat = random.nextInt(2) + 1;
 		for (int i = 0; i < meat; i++) {
 			this.spawnAtLocation(muttonId, 1);
 		}
