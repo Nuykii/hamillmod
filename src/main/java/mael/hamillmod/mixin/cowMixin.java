@@ -3,6 +3,7 @@ package mael.hamillmod.mixin;
 import mael.hamillmod.HamillMod;
 import net.minecraft.core.entity.animal.EntityAnimal;
 import net.minecraft.core.entity.animal.EntityCow;
+import net.minecraft.core.item.Item;
 import net.minecraft.core.world.World;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
@@ -22,14 +23,13 @@ public class cowMixin extends EntityAnimal {
 	}
 
 	@Override
-	public int getDropItemId() {
-		float drop = this.world.rand.nextFloat();
-		if (drop < 0.5F) {
-			return 0;
-		} else if (drop < 0.95F) {
-			return this.isOnFire() ? HamillMod.steak.id : HamillMod.rawBeef.id;
-		} else {
-			return this.isOnFire() ? HamillMod.steak.id : HamillMod.rawBeef.id;
+	public void dropFewItems() {
+		int amount = random.nextInt(3) + 1;
+		for (int i = 0; i < amount; i++)
+			spawnAtLocation(Item.leather.id, 1, 0f);
+		super.dropFewItems();
 		}
+
 	}
-}
+
+// I don't give a FUCK what you think I'm keeping this the droprates are great for my purposes fuck you FUCK YOU FUCK YOUUUUUUU
