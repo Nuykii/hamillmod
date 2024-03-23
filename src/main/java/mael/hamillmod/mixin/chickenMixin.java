@@ -17,7 +17,9 @@ public class chickenMixin extends EntityAnimal {
 
 	@Inject(method = "getDropItemId", at = @At("HEAD"), cancellable = true)
 	protected int getDropItemId(CallbackInfoReturnable<Integer> cir) {
-		cir.setReturnValue(this.remainingFireTicks > 0 ? HamillMod.roastedChicken.id: HamillMod.rawChicken.id);
+		cir.setReturnValue(this.remainingFireTicks > 0 ? HamillMod.roastedChicken.id : HamillMod.rawChicken.id);
 		return this.remainingFireTicks > 0 ? HamillMod.roastedChicken.id : HamillMod.rawChicken.id;
 	}
 }
+
+// this uses the basic method for drop rates and returns 0 to 2 raw chickens or 0 to 1 (?) cooked chicken if on fire

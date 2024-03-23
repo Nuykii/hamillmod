@@ -3,7 +3,6 @@ package mael.hamillmod.mixin;
 import mael.hamillmod.HamillMod;
 import net.minecraft.core.entity.animal.EntityAnimal;
 import net.minecraft.core.entity.animal.EntityCow;
-import net.minecraft.core.item.Item;
 import net.minecraft.core.world.World;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
@@ -18,14 +17,19 @@ public class cowMixin extends EntityAnimal {
 
 	@Inject(method = "getDropItemId", at = @At("HEAD"), cancellable = true)
 	protected int getDropItemId(CallbackInfoReturnable<Integer> cir) {
-		cir.setReturnValue(this.remainingFireTicks > 0 ? HamillMod.steak.id: HamillMod.rawBeef.id);
+		cir.setReturnValue(this.remainingFireTicks > 0 ? HamillMod.steak.id : HamillMod.rawBeef.id);
 		return this.remainingFireTicks > 0 ? HamillMod.steak.id : HamillMod.rawBeef.id;
 	}
 
 	@Override
-	public void dropFewItems() {
-		spawnAtLocation(Item.leather.id, 1, 0f);
-		super.dropFewItems();
+	public int getDropItemId() {
+		float drop = this.world.rand.nextFloat();
+		if (drop < 0.5F) {
+			return 0;
+		} else if (drop < 0.95F) {
+			return this.isOnFire() ? HamillMod.steak.id : HamillMod.rawBeef.id;
+		} else {
+			return this.isOnFire() ? HamillMod.steak.id : HamillMod.rawBeef.id;
+		}
 	}
-
 }

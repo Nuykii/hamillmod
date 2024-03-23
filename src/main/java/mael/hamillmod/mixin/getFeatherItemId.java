@@ -15,8 +15,10 @@ public abstract class getFeatherItemId extends EntityLiving {
 	@Shadow
 	protected abstract int getDropItemId();
 	@Override
-	protected void dropFewItems() {
-		spawnAtLocation(Item.featherChicken.id, 1, 0f);
+	public void dropFewItems() {
+		int amount = random.nextInt(1) + 1;
+		for (int i = 0; i < amount; i++)
+			spawnAtLocation(Item.featherChicken.id, 1, 0f);
 		super.dropFewItems();
 	}
 }
