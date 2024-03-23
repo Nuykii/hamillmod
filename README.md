@@ -4,12 +4,8 @@ Welcome to the github for the n's simple foods mod!!
 
 ### What does this mod add?
 
-This mod aims to backport or rework the foods of regular Minecraft for the animals present in BTA!, that means Chicken, Mutton, Pork and Beef, as well as make them dropable by the corresponding mobs, cookable AND stackable!!
+This mod is a quality of life mod that does a few things: add more food (for now, you get food from cows, pigs, chickens and sheep), make the base game food stackable and adds craftable recipes, such as stews (Beef Bourguignon, Chicken Tikka Massala and Irish Stew for now).
 
-### What's currently implemented? What will you do next?
+### What's next?
 
-Sheep drop Mutton, Cows drop Beef, Chicken drop Chicken and Pigs drop Pork!! These are stackable up to 16 (intentional design choice after taking into account the absence of the hunger bar), cookable, eatable, throwable, burnable....
-
-What next?? I'm thinking of adding my own personal choices of food, I was thinking of Hazelnuts growing on trees much like Cherries; mix those with cocoa and you've some Nutella!!
-
-Oh and melons too I guess.
+Next is more craftable recipes as well as more cooking utensils and items, and (one day!) more animals and crops meaning more food and more recipes overall. Currently I am working on the Melon.
