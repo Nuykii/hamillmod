@@ -12,6 +12,7 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
 @Mixin(value = EntitySheep.class, remap = false)
 public class sheepMixin extends EntityAnimal {
+
 	public sheepMixin(World world) {
 		super(world);
 	}
@@ -19,14 +20,15 @@ public class sheepMixin extends EntityAnimal {
 	@Inject(method = "dropFewItems", at = @At("HEAD"))
 	protected void dropFewItems(CallbackInfo si) {
 		int muttonId = this.remainingFireTicks > 0 ? HamillMod.roastedLamb.id : HamillMod.rawMutton.id;
-		int meat = random.nextInt(2) + 1;
+		int meat = random.nextInt(3) + 1;
 		for (int i = 0; i < meat; i++) {
 			this.spawnAtLocation(muttonId, 1);
 		}
 	}
+
 	@Override
 	public void dropFewItems() {
-		int amount = random.nextInt(2) + 1;
+		int amount = random.nextInt(1) + 1;
 		for (int i = 0; i < amount; i++)
 			spawnAtLocation(Block.wool.id, 1, 0f);
 		super.dropFewItems();

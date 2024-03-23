@@ -28,8 +28,7 @@ public class cowMixin extends EntityAnimal {
 		for (int i = 0; i < amount; i++)
 			spawnAtLocation(Item.leather.id, 1, 0f);
 		super.dropFewItems();
-		}
-
 	}
+}
 
 // I don't give a FUCK what you think I'm keeping this the droprates are great for my purposes fuck you FUCK YOU FUCK YOUUUUUUU
