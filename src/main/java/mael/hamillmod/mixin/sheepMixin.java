@@ -28,9 +28,7 @@ public class sheepMixin extends EntityAnimal {
 
 	@Override
 	public void dropFewItems() {
-		int amount = random.nextInt(1) + 1;
-		for (int i = 0; i < amount; i++)
-			spawnAtLocation(Block.wool.id, 1, 0f);
+		spawnAtLocation(Block.wool.id, 1, 0f);
 		super.dropFewItems();
 	}
 }
