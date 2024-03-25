@@ -1,9 +1,15 @@
 package mael.hamillmod;
 
+import mael.hamillmod.blocks.simpleFoodsBlocks;
+import mael.hamillmod.food.fullEnglish;
 import net.fabricmc.api.ModInitializer;
+import net.minecraft.core.block.*;
 import net.minecraft.core.item.Item;
 import net.minecraft.core.item.ItemFoodStackable;
+import net.minecraft.core.item.ItemSeeds;
 import net.minecraft.core.item.ItemSoup;
+import net.minecraft.core.block.BlockCropsWheat;
+import org.jetbrains.annotations.NotNull;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import turniplabs.halplibe.helper.ItemHelper;
@@ -26,6 +32,7 @@ public class HamillMod implements ModInitializer, GameStartEntrypoint, RecipeEnt
 			config.updateConfig();
 			UtilIdRegistrar.initIds(config.getInt("startingBlockId"), config.getInt("startingItemId"));
 	}
+
 	public static Item rawBeef = ItemHelper.createItem(MOD_ID, new ItemFoodStackable("food.rawBeef", UtilIdRegistrar.nextIdItem(), 2, true, 16), "rawBeef.png");
 	public static Item rawChicken = ItemHelper.createItem(MOD_ID, new ItemFoodStackable("food.rawChicken", UtilIdRegistrar.nextIdItem(), 1, true, 16), "rawChicken.png");
 	public static Item rawPork = ItemHelper.createItem(MOD_ID, new ItemFoodStackable("food.rawPork", UtilIdRegistrar.nextIdItem(), 2, true, 16), "rawPork.png");
@@ -38,9 +45,11 @@ public class HamillMod implements ModInitializer, GameStartEntrypoint, RecipeEnt
 	public static ItemSoup irishStew = (ItemSoup) ItemHelper.createItem(MOD_ID, new ItemSoup("food.irishStew", UtilIdRegistrar.nextIdItem(), 8), "irishStew.png"); // Michael I miss you so much
 	public static ItemSoup tikkaMassala = (ItemSoup) ItemHelper.createItem(MOD_ID, new ItemSoup("food.tikkaMassala", UtilIdRegistrar.nextIdItem(), 7), "tikkaMassala.png");
 	public static Item fullEnglish = ItemHelper.createItem(MOD_ID, new fullEnglish("food.fullEnglish", UtilIdRegistrar.nextIdItem(), 15), "fullEnglish.png");
+	public static Item melonSlice = ItemHelper.createItem(MOD_ID, new ItemFoodStackable("food.melonSlice", UtilIdRegistrar.nextIdItem(), 3, false, 64), "melonSlice.png");
 
 	// food utensils start here
 	public static Item plate = ItemHelper.createItem(MOD_ID, new Item("plate", UtilIdRegistrar.nextIdItem()), "plate.png");
+
 	@Override
 	public void onInitialize() {
 		LOGGER.info("HamillMod successfully loaded.");
@@ -48,7 +57,7 @@ public class HamillMod implements ModInitializer, GameStartEntrypoint, RecipeEnt
 
 	@Override
 	public void beforeGameStart() {
-
+		new simpleFoodsBlocks().makeNewBlocks();
 	}
 
 	public void onRecipesReady() {

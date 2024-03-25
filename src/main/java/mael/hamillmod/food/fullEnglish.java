@@ -1,5 +1,6 @@
-package mael.hamillmod;
+package mael.hamillmod.food;
 
+import mael.hamillmod.HamillMod;
 import net.minecraft.core.entity.player.EntityPlayer;
 import net.minecraft.core.item.ItemFood;
 import net.minecraft.core.item.ItemStack;

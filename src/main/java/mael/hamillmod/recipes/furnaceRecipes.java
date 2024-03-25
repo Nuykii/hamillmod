@@ -2,7 +2,9 @@ package mael.hamillmod;
 
 import net.minecraft.core.block.Block;
 import net.minecraft.core.item.Item;
+import net.minecraft.core.item.ItemSeeds;
 import turniplabs.halplibe.helper.RecipeBuilder;
+import turniplabs.halplibe.helper.recipeBuilders.RecipeBuilderShapeless;
 import turniplabs.halplibe.util.RecipeEntrypoint;
 
 import static mael.hamillmod.HamillMod.*;
@@ -79,6 +81,7 @@ public class furnaceRecipes implements RecipeEntrypoint { //RecipeEntryPoint is 
 			.addInput('L', plate)
 			.setConsumeContainer(false)
 			.create("fullEnglishBreakfast", fullEnglish.getDefaultStack());
+
 	}
 }
 
